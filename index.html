@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>أفضل 13 ملتزمًا بالحضور</title>
+<title>أفضل الملتزمين بالحضور</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap">
 <style>
 :root{--bg:#f4f1ea;--card:#ffffff;--ink:#14202f;--mut:#5b6674;--track:#e4dfd3;--a:#c98a1f;--ac:#1f9e90;--nl:50%;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -13,19 +13,14 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cairo',Tahoma,Arial,sans-serif;line-height:1.5}
 main{max-width:900px;margin:0 auto;padding:24px 18px 48px}
-h1{font-size:clamp(24px,5vw,38px);margin:0 0 4px;animation:drop .8s both}
-.sub{color:var(--mut);margin:0 0 20px;animation:drop .8s .15s both}
 @keyframes drop{from{opacity:0;transform:translateY(-14px)}}
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:18px}
-.st{background:var(--card);border-radius:14px;padding:12px 14px;animation:drop .7s both}
-.st:nth-child(2){animation-delay:.1s}
-.st b{display:block;font-size:clamp(22px,5vw,34px);line-height:1.2;color:var(--ac)}
-.st span{font-size:14px;color:var(--mut)}
+h1.neon,.sub.neon{font-size:16px;font-weight:700;text-decoration:underline;text-underline-offset:5px;color:var(--ac);margin:0 0 8px;text-shadow:0 0 6px var(--ac),0 0 14px var(--ac);animation:nz 3.2s ease-in-out 1 both}
+.sub.neon{animation-delay:.3s;margin-bottom:20px}
+@keyframes nz{0%{opacity:0;text-shadow:none}25%,60%{opacity:1;text-shadow:0 0 12px var(--ac),0 0 30px var(--ac),0 0 60px var(--ac)}40%{opacity:.7;text-shadow:0 0 2px var(--ac)}}
 .ctl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .ctl button{font:inherit;font-size:15px;border:2px solid var(--ac);background:transparent;color:var(--ink);border-radius:999px;padding:6px 16px;cursor:pointer;transition:.2s}
 .ctl button:hover{transform:translateY(-2px)}
-.ctl button.on,.ctl #re{background:var(--ac);color:#fff}
-.lg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--mut);margin:0 0 14px}
+.ctl #re{background:var(--ac);color:#fff}
 .chart{display:flex;flex-direction:column;gap:6px}
 .row{all:unset;box-sizing:border-box;display:grid;grid-template-columns:30px 255px 1fr 80px;align-items:center;gap:10px;padding:7px 10px;border-radius:12px;cursor:pointer;opacity:0;transform:translateX(40px);transition:opacity .9s,transform .9s,background .25s}
 .row.in{opacity:1;transform:none}
@@ -34,7 +29,6 @@ h1{font-size:clamp(24px,5vw,38px);margin:0 0 4px;animation:drop .8s both}
 .row:focus-visible{outline:3px solid var(--ac)}
 .rk{font-size:14px;color:var(--mut);text-align:center}
 .nm{font-size:14px;font-weight:600}
-.em{font-size:18px;margin-inline-end:6px;vertical-align:-1px}
 .tr{height:26px;background:var(--track);border-radius:8px;overflow:hidden;position:relative}
 .bar{display:block;height:100%;width:0;border-radius:8px;position:relative;overflow:hidden;background:var(--c);box-shadow:0 0 10px var(--c),0 0 22px var(--c);transition:width 2.8s cubic-bezier(.25,.8,.3,1)}
 .bar::after{content:"";position:absolute;inset:0;width:40%;background:linear-gradient(270deg,transparent,rgba(255,255,255,.55),transparent);animation:sh 2.4s 1.4s infinite;transform:translateX(120%)}
@@ -56,59 +50,46 @@ h1{font-size:clamp(24px,5vw,38px);margin:0 0 4px;animation:drop .8s both}
 @media (max-width:600px){
 .row{grid-template-columns:24px 1fr 70px;grid-template-areas:"rk nm nm" "rk tr vl";gap:2px 8px}
 .rk{grid-area:rk}.nm{grid-area:nm}.tr{grid-area:tr}.vl{grid-area:vl}
-.st span{font-size:12px}.det{flex-wrap:wrap}}
+.det{flex-wrap:wrap}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <main>
-<h1>أفضل 13 ملتزمًا بالحضور</h1>
-<p class="sub">كشف البصمة من 26/10/2026 إلى 15/11/2026، بترتيب نسبة الالتزام ثم الجزاء</p>
-<div class="stats">
-<div class="st"><b id="s1">0</b><span>موظفًا في القائمة</span></div>
-<div class="st"><b id="s2">0</b><span>متوسط مدة الخدمة (حسب المتوفر)</span></div>
-</div>
+<h1 class="neon">إدارة الموارد البشرية</h1>
+<p class="sub neon">أفضل الملتزمين بالحضور من الفترة 26/10/2026 إلى 15/11/2026</p>
 <div class="ctl">
 <button id="re">▶ إعادة التشغيل</button>
 <button id="pz">⏸ إيقاف التشغيل التلقائي</button>
-<button data-f="all" class="on">الكل</button>
-<button data-f="top">5 سنوات فأكثر</button>
-<button data-f="rest">أقل من 5 سنوات</button>
 </div>
-<p class="lg"><span>🚘 مبيعات السيارات</span><span>🧾 المشتريات</span><span>🚗📑 تعاقدات السيارات</span><span>🃏 موظف جوكر ومساعد</span><span>🚘👔 مدير مبيعات سيارات</span><span>👤 بيانات الوظيفة غير متوفرة</span><span>📣 التسويق</span><span>🏢 الإدارة العامة</span></p>
 <div class="chart" id="chart"></div>
-<p class="note">الأعمدة تمثل عدد الأيام بلا تأخير. الدائرة تمثل نسبة الالتزام (أيام بدون تأخير ÷ إجمالي الأيام). اضغط على أي موظف لرؤية التفاصيل. الفلاتر حسب مدة الخدمة تخفي من لا تتوفر بياناتهم.</p>
+<p class="note">الأعمدة تمثل أيام بلا تأخير، اضغط على أي موظف لرؤية التفاصيل.</p>
 <div class="det" id="det">
 <div class="ring"><svg width="110" height="110" viewBox="0 0 120 120"><circle class="bg" cx="60" cy="60" r="52"/><circle class="fg" id="fg" cx="60" cy="60" r="52"/></svg><b id="rv">—</b></div>
-<div class="dt"><h3 id="dn">اختر موظفًا</h3><p id="dp">ستظهر هنا إدارته ووظيفته.</p><p id="dq">وكذلك رتبته والتزامه وجزاؤه وإضافيه.</p></div>
+<div class="dt"><h3 id="dn">اختر موظفًا</h3><p id="dp">ستظهر هنا إدارته ووظيفته.</p><p id="dq">وكذلك رتبته والتزامه وجزاؤه.</p></div>
 </div>
 </main>
 <script>
-/* [الاسم, سنوات الخدمة, مدة الخدمة نصًا, تاريخ التعيين, الإدارة, الوظيفة, أيقونة, (غير مستخدم), نسبة الالتزام, الجزاء بالأيام, أيام بلا تأخير, إجمالي الأيام]
-   المصدر: جدول «أفضل 15 ملتزمًا بالحضور» في ورقة 26 سبتمبر–20 أكتوبر، أول 14 بالترتيب نفسه.
-   null = بيانات التعيين غير متوفرة في الكشف */
+/* [الاسم, الإدارة, الوظيفة, نسبة الالتزام, الجزاء بالأيام, أيام بلا تأخير, إجمالي الأيام] */
 const D=[
-["أ/ محمد عاطف محمود محمد",5.8,"5 سنوات و9 أشهر","فبراير 2021","إدارة المشتريات","مسئول مشتريات","🧾",61.96,1,0,19,19],
-["أ/ احمد اسماعيل عبد الحافظ",2.0,"سنة و11 شهرًا","ديسمبر 2024","إدارة الأشراف الداخلى","مشرف خدمات معاونة","🃏",39.12,1,0,22,22],
-["أ/ حاتم توفيق مصطفى كمال",0.4,"5 أشهر","يونيو 2026","إدارة التسويق","مسئول تسويق","📣",32.78,1,0,13,13],
-["أ/ محمود شفيق محمود رجب",2.6,"سنتان و6 أشهر","مايو 2024","الإدارة العامة","مدير الفروع","🏢",31.57,1,0,19,19],
-["أ/ ريمون جورج يعقوب حنا",8.0,"7 سنوات و11 شهرًا","ديسمبر 2018","إدارة المشتريات","مسئول تعاقدات سيارات","🚗📑",12.73,1,0,19,19],
-["أ/ تامر امال شفيق سليمان",1.8,"سنة و9 أشهر","فبراير 2025","إدارة التسويق","مسئول تسويق","📣",2.57,1,0,21,21],
-["أ/ نبيل زكى بدروس بشاى",8.2,"8 سنوات وشهران","سبتمبر 2018","إدارة مبيعات الأفراد","مسئول مبيعات","🚘",1.8,1,0,20,20],
-["أ/ يوسف عبد المنعم على",0.3,"3 أشهر","أغسطس 2026","إدارة الأشراف الداخلى","عامل خدمات","🃏",0,1,0,20,20],
-["أ/ سعيد سعد ابراهيم جاد",1.0,"سنة","نوفمبر 2025","إدارة الأشراف الداخلى","عامل خدمات","🃏",0,1,0,19,19],
-["أ/ ميلاد سعيد عيسى سيدهم",5.8,"5 سنوات و9 أشهر","فبراير 2021","إدارة الأشراف الداخلى","عامل خدمات","🃏",0,1,0,17,17],
-["أ/ محمد السيد المصرى",null,"","",null,null,"👤",0,1,0,17,17],
-["أ/ حسين عبد العال منصور سالم",1.0,"11 شهرًا","ديسمبر 2025","إدارة الأشراف الداخلى","عامل خدمات","🃏",0,1,0,11,11],
-["أ/ مجدى حامد عبد الرحيم",null,"","","مبيعات السيارات","مدير مبيعات سيارات","🚘👔",0,0.947,0,18,19]];
-const N=D.length,MAX=Math.max(...D.map(d=>d[10])),CUT=5;
+["أ/ ريمون جورج يعقوب حنا","إدارة المشتريات","مسئول تعاقدات سيارات",1,0,19,19],
+["أ/ مجدى حامد عبد الرحيم","مبيعات السيارات","مدير مبيعات سيارات",0.947,0,18,19],
+["أ/ محمد عاطف محمود محمد","إدارة المشتريات","مسئول مشتريات",1,0,19,19],
+["أ/ احمد اسماعيل عبد الحافظ","إدارة الأشراف الداخلى","مشرف خدمات معاونة",1,0,22,22],
+["أ/ تامر امال شفيق سليمان","إدارة التسويق","مسئول تسويق",1,0,21,21],
+["أ/ نبيل زكى بدروس بشاى","إدارة مبيعات الأفراد","مسئول مبيعات",1,0,20,20],
+["أ/ ميلاد سعيد عيسى سيدهم","إدارة الأشراف الداخلى","عامل خدمات",1,0,17,17],
+["أ/ محمود شفيق محمود رجب","الإدارة العامة","مدير الفروع",1,0,19,19],
+["أ/ سعيد سعد ابراهيم جاد","إدارة الأشراف الداخلى","عامل خدمات",1,0,19,19],
+["أ/ حسين عبد العال منصور سالم","إدارة الأشراف الداخلى","عامل خدمات",1,0,11,11],
+["أ/ حاتم توفيق مصطفى كمال","إدارة التسويق","مسئول تسويق",1,0,13,13],
+["أ/ يوسف عبد المنعم على","إدارة الأشراف الداخلى","عامل خدمات",1,0,20,20],
+["أ/ محمد السيد المصرى",null,null,1,0,17,17]];
+const N=D.length,MAXD=Math.max(...D.map(d=>d[5]));
 const $=s=>document.querySelector(s),chart=$('#chart');
-let filter='all',run=0;
-const fm=x=>Math.round(x)+' يوم';
-const fy=x=>x.toFixed(1)+' سنة';
+const pc=c=>(c===1?'100':(c*100).toFixed(1))+'%';
 const hue=i=>Math.round(i*(330/(N-1)));
 const col=i=>'hsl('+hue(i)+' 100% var(--nl))';
-const wid=v=>Math.max(4,v/MAX*100).toFixed(1);
 const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 function count(el,from,to,fmt,dur=2800){
   if(reduce){el.textContent=fmt(to);return}
@@ -118,38 +99,38 @@ function count(el,from,to,fmt,dur=2800){
 function render(){
   chart.innerHTML='';
   D.forEach((d,i)=>{
-    if((filter==='top'&&!(d[1]>=CUT))||(filter==='rest'&&!(d[1]!=null&&d[1]<CUT)))return;
     const b=document.createElement('button');b.className='row';b.dataset.i=i;
     b.style.setProperty('--c',col(i));
-    b.innerHTML='<span class="rk">'+(i+1)+'</span><span class="nm"'+(d[4]?' title="'+d[4]+'"':'')+'><span class="em">'+d[6]+'</span>'+d[0]+'</span><span class="tr"><span class="bar" data-w="'+wid(d[10])+'"></span></span><span class="vl">'+fm(0)+'</span>';
+    b.innerHTML='<span class="rk">'+(i+1)+'</span><span class="nm"'+(d[1]?' title="'+d[1]+'"':'')+'>'+d[0]+'</span><span class="tr"><span class="bar" data-w="'+(d[5]/MAXD*100).toFixed(1)+'"></span></span><span class="vl">0 يوم</span>';
     b.onclick=()=>pick(i,b);chart.appendChild(b);
   });
   play();
 }
-let auto=true,loopT;
-function showAll(){[...chart.children].forEach(r=>{const b=r.querySelector('.bar');r.classList.add('in');b.style.width=b.dataset.w+'%';r.querySelector('.vl').textContent=fm(D[r.dataset.i][10])})}
+let auto=true,loopT,run=0;
+const fp=c=>x=>(c===1?Math.round(x):x.toFixed(1))+'%';
+function showAll(){[...chart.children].forEach(r=>{const b=r.querySelector('.bar');r.classList.add('in');b.style.width=b.dataset.w+'%';r.querySelector('.vl').textContent=D[r.dataset.i][5]+' يوم'})}
 function play(){
   const my=++run;clearTimeout(loopT);
   const n=chart.children.length,step=reduce?0:1300;
   if(auto&&!reduce)loopT=setTimeout(()=>{if(my===run)play()},500+n*step+6000);
   [...chart.children].forEach((r,k)=>{
-    const bar=r.querySelector('.bar'),vl=r.querySelector('.vl'),m=D[r.dataset.i][10];
-    r.classList.remove('in');bar.style.transition='none';bar.style.width='0';vl.textContent=fm(0);
+    const bar=r.querySelector('.bar'),vl=r.querySelector('.vl'),c=D[r.dataset.i][5];
+    r.classList.remove('in');bar.style.transition='none';bar.style.width='0';vl.textContent='0 يوم';
     void bar.offsetWidth;bar.style.transition='';
-    setTimeout(()=>{if(my!==run)return;r.classList.add('in');bar.style.width=bar.dataset.w+'%';count(vl,0,m,fm);if(auto)pick(+r.dataset.i,r)},reduce?0:500+k*step);
+    setTimeout(()=>{if(my!==run)return;r.classList.add('in');bar.style.width=bar.dataset.w+'%';count(vl,0,c,x=>Math.round(x)+' يوم');if(auto)pick(+r.dataset.i,r)},reduce?0:500+k*step);
   });
 }
 function pick(i,row){
-  const [n,v,t,h,dp,jb,em,m,cp,pn,dk,dt]=D[i];
+  const [n,dp,jb,cp,pn,dk,dt]=D[i];
   document.querySelectorAll('.row.sel').forEach(x=>x.classList.remove('sel'));row.classList.add('sel');
-  $('#dn').textContent=em+' '+n;
+  $('#dn').textContent=n;
   $('#dp').textContent=dp?dp+' — '+jb:'الإدارة والوظيفة غير متوفرتين في الكشف';
-  $('#dq').textContent='المركز '+(i+1)+' من '+N+' — أيام بلا تأخير '+dk+' من '+dt+' — الجزاء '+pn+' يوم'+(t?' — خدمة '+t+' منذ '+h:'');
+  $('#dq').textContent='المركز '+(i+1)+' من '+N+' — أيام بلا تأخير '+dk+' من '+dt+' — الجزاء '+pn+' يوم';
   const c=col(i);
   $('#fg').style.stroke=c;$('#fg').style.filter='drop-shadow(0 0 6px '+c+')';
   $('#fg').style.strokeDashoffset=327;
   requestAnimationFrame(()=>requestAnimationFrame(()=>{$('#fg').style.strokeDashoffset=(327*(1-cp)).toFixed(1)}));
-  count($('#rv'),0,cp*100,x=>(cp===1?Math.round(x):x.toFixed(1))+'%',2600);
+  count($('#rv'),0,dk,x=>Math.round(x)+' يوم',2600);
   if(!reduce)burst(c);
 }
 function burst(c){
@@ -163,12 +144,6 @@ function burst(c){
 }
 $('#re').onclick=play;
 $('#pz').onclick=function(){auto=!auto;if(auto){this.textContent='⏸ إيقاف التشغيل التلقائي';play()}else{this.textContent='▶ تشغيل تلقائي';run++;clearTimeout(loopT);showAll()}};
-document.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{
-  document.querySelectorAll('[data-f]').forEach(x=>x.classList.remove('on'));b.classList.add('on');filter=b.dataset.f;render();
-});
-const known=D.filter(d=>d[1]!=null);
-count($('#s1'),0,N,x=>Math.round(x));
-count($('#s2'),0,known.reduce((a,d)=>a+d[1],0)/known.length,fy);
 render();
 </script>
 </body>
